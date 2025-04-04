@@ -1,0 +1,9 @@
+K := \ x y . x
+S := \ f x v . f v ( x v )
+X := \ x . x S K
+I := S K K
+compose := S (K S) K
+K1 := X (X (X X))
+S1 := X K1
+eval := S (K (S I)) (S (K K) I)
+flip := S (S (K compose) S) (K K)
